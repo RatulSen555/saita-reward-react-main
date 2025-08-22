@@ -41,7 +41,6 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/how-to-buy" element={<HowToBuy />} />
           <Route path="/wallet" element={<Terms />} />
-          <Route path="/welness" element={<RetirementPlan />} />
           <Route path="/legal" element={<LegalHub />} />
           <Route path="/srt" element={<Token />} />
           <Route path="/marketplace" element={<UrbanHalo />} />
