@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import Navbar from "../components/Navbar";
-import retirementVideo from '../../../assets/videos/retirement.mp4'; // Corrected path
+// Corrected path
 
 
 // Lazy Footer
