@@ -1,0 +1,57 @@
+/* Updated index.css */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif;
+    @apply text-white;
+  }
+
+  a {
+    @apply text-highlightGold hover:text-highlightGold/80 transition-colors;
+  }
+
+  input, textarea {
+    @apply bg-[#111] border border-gray-700 text-white rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-highlightGold/50;
+  }
+}
+
+/* Remove conflicting animations */
+.coin-glow {
+  filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.6));
+}
+
+/* Unified glow effect */
+.glow-box {
+  @apply border border-gray-700;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-box:hover {
+  @apply border-highlightGold/50;
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.1);
+}
+
+@keyframes float {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

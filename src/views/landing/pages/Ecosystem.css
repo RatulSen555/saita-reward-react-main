@@ -1,0 +1,48 @@
+/* src/views/landing/pages/Ecosystem.css */
+.token-hover {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.token-hover:hover {
+  transform: translateY(-5px);
+}
+
+.glow {
+  background: radial-gradient(
+    circle, 
+    rgba(255, 215, 0, 0.8) 0%, 
+    rgba(255, 215, 0, 0.4) 50%, 
+    transparent 70%
+  );
+  filter: blur(15px);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .token-hover {
+    width: 120px;
+    height: 120px;
+  }
+}
