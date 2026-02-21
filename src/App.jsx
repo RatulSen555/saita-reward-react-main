@@ -11,7 +11,6 @@ import RewardList from "views/landing/pages/RewardList";
 import Account from "views/landing/pages/Account";
 import HowToBuy from "views/landing/pages/how-to-buy";
 import Terms from "views/landing/pages/terms"; 
-import RetirementPlan from "views/landing/pages/retirement-plan"; 
 import LegalHub from "views/landing/pages/LegalHub"; 
 import Token from "views/landing/pages/token";
 import UrbanHalo from "views/landing/pages/UrbanHalo";
@@ -42,7 +41,6 @@ function App() {
           <Route path="/account" element={<Account />} />
           <Route path="/how-to-buy" element={<HowToBuy />} />
           <Route path="/wallet" element={<Terms />} />
-          <Route path="/welness" element={<RetirementPlan />} />
           <Route path="/legal" element={<LegalHub />} />
           <Route path="/srt" element={<Token />} />
           <Route path="/marketplace" element={<UrbanHalo />} />
