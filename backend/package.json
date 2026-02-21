@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "start": "node dist/server.js",
+    "dev": "nodemon server.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "copyfiles -u 1 server.js package.json package-lock.json \"src/**/*.js\" \"config/**/*.json\" dist/"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.10",
+    "rimraf": "^5.0.10"
+  }
+}
